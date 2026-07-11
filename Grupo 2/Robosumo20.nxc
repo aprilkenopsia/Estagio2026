@@ -10,7 +10,7 @@
 #define sensor_esq SensorUS(IN_3)  // Sensor esquerdo na porta 1
 #define sensor_dir SensorUS(IN_4)  // Sensor direito na porta 2
 
-#define distancia_busca 17      // Limiar para começar a atacar (em centímetros)
+#define distancia_busca 20      // Limiar para começar a atacar (em centímetros)
 
 task main(){
     // Inicialização dos sensores ultrassônicos
@@ -22,8 +22,8 @@ task main(){
 
     //os 5 segundos obrigatórios da regra da competição
     Wait(5200);
-    //OnFwd(OUT_AC, 50);           // pra tras
-    //Wait(100);
+    OnRev(OUT_AC, 50);           // pra tras
+    Wait(100);
 
     //==========================================================================
     // LAÇO PRINCIPAL DE COMBATE

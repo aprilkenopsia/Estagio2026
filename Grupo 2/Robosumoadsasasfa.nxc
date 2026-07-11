@@ -21,9 +21,9 @@ task main(){
     
 
     //os 5 segundos obrigatórios da regra da competição
-    Wait(5200);
-    //OnFwd(OUT_AC, 50);           // pra tras
-    //Wait(100);
+    Wait(5500);
+    OnFwd(OUT_AC, 50);           // pra tras
+    Wait(100);
 
     //==========================================================================
     // LAÇO PRINCIPAL DE COMBATE
@@ -42,8 +42,8 @@ task main(){
         }
         else{                           
             // Caso não localize ninguém, gira no próprio eixo para rastrear a arena
-            OnFwd(motorDireita, -40);
-            OnFwd(motorEsquerda, 40);
+            OnFwd(motorDireita, -35);
+            OnFwd(motorEsquerda, 35);
         }
     }
 }
